@@ -1,1 +1,67 @@
-<p>header works!</p>
+<!-- Navbar -->
+<nav
+    class="navbar navbar-expand-lg bg-dark border-bottom border-body"
+    data-bs-theme="dark"
+>
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand logo -->
+            <a class="navbar-brand" routerLink="#">Navbar</a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/products">Products</a>
+                </li>
+            </ul>
+
+            <!-- Middle area: Search bar -->
+            <form class="d-flex mx-3 mx-lg-auto" role="search">
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                    Search
+                </button>
+            </form>
+
+            <!-- Right elements -->
+            <div class="rounded-pill bg-body-secondary">
+                <!-- Icon -->
+                <!-- <a class="text-reset me-3" href="#">
+                <i class="fas fa-shopping-cart">he</i>
+            </a> -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/user/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/user/register"
+                            >Register</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+</nav>
