@@ -1,9 +1,14 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { constants } from '../../../../sharedConstant';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root',
 })
 export class ProductsService {
+    constructor(private http: HttpClient) {}
 
-  constructor() { }
+    getAllProducts() {
+        return this.http.get(constants.baseApi + 'products');
+    }
 }
