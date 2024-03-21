@@ -1,1 +1,1 @@
-export const constants = { baseApi: '' };
+export const constants = { baseApi: 'http://localhost:5066/' };
