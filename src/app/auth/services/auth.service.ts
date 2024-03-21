@@ -11,7 +11,22 @@ export class AuthService {
 
     login(credentials: { email: string; password: string }): Observable<any> {
         return this.http
-            .post<any>(constants.baseApi + 'login', credentials)
+            .post<any>(constants.baseApi + 'Users/Login', credentials)
+            .pipe(
+                tap((response) => {
+                    if (response && response.token) {
+                        this.setAuthToken(response);
+                    }
+                })
+            );
+    }
+    register(userData: {
+        email: string;
+        password: string;
+        name: string;
+    }): Observable<any> {
+        return this.http
+            .post<any>(constants.baseApi + 'Users/Register', userData)
             .pipe(
                 tap((response) => {
                     if (response && response.token) {
