@@ -9,6 +9,6 @@ export class ProductsService {
     constructor(private http: HttpClient) {}
 
     getAllProducts() {
-        return this.http.get(constants.baseApi + 'products');
+        return this.http.get(constants.baseApi + 'Products/GetAllProducts');
     }
 }
