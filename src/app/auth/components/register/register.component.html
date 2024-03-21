@@ -17,6 +17,7 @@
                             </h2>
 
                             <form>
+                                <!-- Name input -->
                                 <div class="form-outline mb-4">
                                     <label
                                         class="form-label"
@@ -27,9 +28,11 @@
                                         type="text"
                                         id="form3Example1cg"
                                         class="form-control form-control-lg"
+                                        [(ngModel)]="name"
+                                        required
                                     />
                                 </div>
-
+                                <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <label
                                         class="form-label"
@@ -40,9 +43,11 @@
                                         type="email"
                                         id="form3Example3cg"
                                         class="form-control form-control-lg"
+                                        [(ngModel)]="email"
+                                        required
                                     />
                                 </div>
-
+                                <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <label
                                         class="form-label"
@@ -53,9 +58,11 @@
                                         type="password"
                                         id="form3Example4cg"
                                         class="form-control form-control-lg"
+                                        [(ngModel)]="password"
+                                        required
                                     />
                                 </div>
-
+                                <!-- Repeat Password input -->
                                 <div class="form-outline mb-4">
                                     <label
                                         class="form-label"
@@ -97,10 +104,41 @@
                                         Register
                                     </button>
                                 </div>
+                                <!-- Register buttons -->
+                                <div class="text-center">
+                                    <button
+                                        type="button"
+                                        class="btn btn-link btn-floating mx-1"
+                                    >
+                                        <i class="fa fa-facebook-f"></i>
+                                    </button>
 
+                                    <button
+                                        type="button"
+                                        class="btn btn-link btn-floating mx-1"
+                                    >
+                                        <i class="fa fa-google"></i>
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-link btn-floating mx-1"
+                                    >
+                                        <i class="fa fa-twitter"></i>
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-link btn-floating mx-1"
+                                    >
+                                        <i class="fa fa-github"></i>
+                                    </button>
+                                </div>
                                 <p class="text-center text-muted mt-5 mb-0">
                                     Have already an account?
-                                    <a href="#!" class="fw-bold text-body"
+                                    <a
+                                        routerLink="user/login"
+                                        class="fw-bold text-body"
                                         ><u>Login here</u></a
                                     >
                                 </p>

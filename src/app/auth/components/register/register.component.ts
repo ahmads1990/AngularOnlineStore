@@ -7,9 +7,25 @@ import { Router } from '@angular/router';
     styleUrl: './register.component.css',
 })
 export class RegisterComponent {
+    name: string = '';
     email: string = '';
     password: string = '';
     errorMessage: string = '';
     constructor(private authService: AuthService, private router: Router) {}
-    register() {}
+    register() {
+        this.authService
+            .register({
+                email: this.email,
+                password: this.password,
+                name: this.name,
+            })
+            .subscribe(
+                () => {
+                    this.router.navigate(['/products']);
+                },
+                (error) => {
+                    this.errorMessage = error; // Display error message
+                }
+            );
+    }
 }
